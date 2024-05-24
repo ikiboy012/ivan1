@@ -22,6 +22,9 @@ import {
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AsyncStorageKey, getAsyncStorage, removeAsyncStorage, setAsyncStorage } from './src/config/asyncstorageConfig';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import IonIcon from 'react-native-vector-icons/Ionicons';
+
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -80,6 +83,21 @@ function App(): React.JSX.Element {
             }
           }}
         />
+
+        {/* Icons: https://pictogrammers.com/library/mdi/ */}
+        <Icon name="flower" size={100} color="blue" />
+        <IonIcon name="airplane-outline" size={100} color="blue" />
+        <View style={{width:200}}>
+          <Icon.Button
+            name="facebook"
+            backgroundColor="#3b5998"
+            style={{ width: 200, }}
+
+          // onPress={this.loginWithFacebook}
+          >
+            Login with Facebook
+          </Icon.Button>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
