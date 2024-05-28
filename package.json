@@ -3,10 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "react-native start --reset-cache",
+    "ios": "react-native run-ios --simulator='iPhone 15 Pro'",
+    "ios:interactive": "react-native run-ios --interactive",
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "lint": "eslint .",
-    "start": "react-native start",
+    "android:interactive": "react-native run-android --interactive",
+    "bundle:size": "react-native-bundle-visualizer",
+    "upgrade": "react-native upgrade",
+    "clean": "react-native-clean-project",
+    "lint": "eslint --fix .",
     "test": "jest"
   },
   "dependencies": {

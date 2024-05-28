@@ -1,36 +1,19 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-} from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { LogBox, Platform, UIManager } from 'react-native';
+import { Bootstrap } from './src/components/Bootstrap';
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+LogBox.ignoreLogs([]);
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-        contentContainerStyle={{ padding: 10, gap: 10 }}
-      >
-      </ScrollView>
-    </SafeAreaView>
-  );
+if (Platform.OS === 'android') {
+    if (UIManager.setLayoutAnimationEnabledExperimental) {
+        UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
 }
 
-const styles = StyleSheet.create({});
+function App() {
+    return (
+        <Bootstrap />
+    );
+};
 
 export default App;
