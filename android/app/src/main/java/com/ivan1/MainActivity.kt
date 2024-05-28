@@ -6,7 +6,8 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnable
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 import android.content.Intent;
 import android.content.res.Configuration;
-
+// ADDED BY: @react-navigation/native
+import android.os.Bundle
 
 class MainActivity : ReactActivity() {
 
@@ -29,4 +30,8 @@ class MainActivity : ReactActivity() {
     intent.putExtra("newConfig", newConfig)
     sendBroadcast(intent)
   }
+	
+  override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(null)
+	}
 }
