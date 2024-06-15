@@ -28,6 +28,17 @@ export function Bootstrap() {
       <SafeAreaView style={{ flex: 1, backgroundColor: '#560705' }}>
         <StatusBar barStyle="light-content" backgroundColor="#560705" />
         <NavigationContainer
+          theme={{
+            colors: {
+              background: "orange",
+              border: "black",
+              card: "yellow",
+              notification: "red",
+              primary: "blue",
+              text: "red"
+            },
+            dark: false
+          }}
           ref={navigationRef}
           onReady={onNavReady}
           onStateChange={onNavStateChange}
