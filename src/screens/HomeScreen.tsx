@@ -51,7 +51,7 @@ export function HomeScreen(props: Props) {
                 <Button
                     title='About'
                     onPress={() => {
-                        props.navigation.navigate("AboutScreen");
+                        props.navigation.navigate("AboutScreen", { param1: 12 });
                     }}
                 />
             </ScrollView>

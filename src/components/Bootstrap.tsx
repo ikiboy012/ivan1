@@ -10,6 +10,7 @@ import Orientation from 'react-native-orientation-locker';
 import { navigationRef, useInitNavigation } from '../lib/navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { RootStackNav } from '../screens/RootStackNav';
+import { RootTabNav } from '../screens/RootTabNav';
 
 export function Bootstrap() {
   const {
@@ -44,9 +45,9 @@ export function Bootstrap() {
           onStateChange={onNavStateChange}
           onUnhandledAction={onUnhandledNavAction}
         >
-          <RootStackNav />
+          <RootTabNav />
         </NavigationContainer>
       </SafeAreaView>
-    </KeyboardAvoidingView>
+    </KeyboardAvoidingView >
   );
 }

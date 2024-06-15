@@ -12,7 +12,7 @@ export type RootStackParamList = Readonly<{
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-export function RootStackNav() {
+export function Tab1Screen() {
     return (
         // API: https://bit.ly/3v8FPox
         <Stack.Navigator

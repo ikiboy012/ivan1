@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import type { StackScreenProps } from '@react-navigation/stack';
 import { useEdgesPerOrientation } from '../lib/orientation';
 import type { RootStackParamList } from './RootStackNav';
+import { Test1 } from '../components/Test1';
 
 export type AboutScreenParams = {
     param1: number;
@@ -53,6 +54,8 @@ export function AboutScreen(props: Props) {
                         props.navigation.goBack();
                     }}
                 />
+                <Text>Param1:{props.route.params?.param1}</Text>
+                <Test1 />
             </ScrollView>
         </SafeAreaView>
     );
