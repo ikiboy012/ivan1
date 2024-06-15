@@ -4,14 +4,13 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import type { BottomTabsParamList } from './RootTabNav';
+import type { RootBottomTabParamList } from './RootBottomTabNav';
 
 export type Tab2ScreenParams = {
     param1: number;
 } | undefined;
 
-type Props = BottomTabScreenProps<BottomTabsParamList, 'Tab2Screen'>;
-
+type Props = BottomTabScreenProps<RootBottomTabParamList, 'Tab2Screen'>;
 
 export function Tab2Screen(props: Props) {
     // SCREEN OPTIONS: https://bit.ly/3hEwUIy
