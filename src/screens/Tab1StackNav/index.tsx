@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { View } from 'react-native';
 import { Fire1Screen, Fire1ScreenParams } from './Fire1Screen';
-import { Fire2ScreenParams } from './Fire2Screen';
+import { Fire2Screen, Fire2ScreenParams } from './Fire2Screen';
 
 export type Tab1StackParamList = Readonly<{
     Fire1Screen: Fire1ScreenParams;
@@ -17,6 +17,7 @@ export function Tab1StackNav() {
         // API: https://bit.ly/3v8FPox
         <Stack.Navigator>
             <Stack.Screen name="Fire1Screen" component={Fire1Screen} />
+            <Stack.Screen name="Fire2Screen" component={Fire2Screen} />
         </Stack.Navigator>
     );
 };

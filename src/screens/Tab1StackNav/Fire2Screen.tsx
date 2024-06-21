@@ -22,9 +22,7 @@ type Props = CompositeScreenProps<
     BottomTabScreenProps<RootBottomTabParamList>
 >;
 
-export function Fire2ScreenScreen(props: Props) {
-
-
+export function Fire2Screen(props: Props) {
     // SCREEN OPTIONS: https://bit.ly/3jiMJVJ
     useEffect(() => {
         props.navigation.setOptions({
