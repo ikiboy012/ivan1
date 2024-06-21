@@ -50,7 +50,7 @@ export function Fire1Screen(props: Props) {
                 <Button
                     title='Klikni me'
                     onPress={() => {
-                        props.navigation.navigate('Fire2Screen');
+                        props.navigation.push('Fire2Screen');
                     }}
                 />
             </ScrollView>
