@@ -28,6 +28,7 @@ export function AboutScreen(props: Props) {
             title: 'About Naslov',
             headerTintColor: 'black',
             headerBackTitleVisible: false,
+            presentation: 'modal',
             // headerLeft: (headerProps) => {
             //     return (
             //         <Icon name="menu" size={22} color={headerProps.tintColor} style={{ marginLeft: 10 }} />
