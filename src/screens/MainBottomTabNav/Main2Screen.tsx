@@ -4,20 +4,38 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import type { RootBottomTabParamList } from './RootBottomTabNav';
+import { MainBottomTabParamList } from '.';
+import { RootStackParamList } from '../RootStackNav';
+import { CompositeScreenProps } from '@react-navigation/native';
+import { StackScreenProps } from '@react-navigation/stack';
 
-export type Tab2ScreenParams = {
+export type Main2ScreenParams = {
     param1: number;
 } | undefined;
 
-type Props = BottomTabScreenProps<RootBottomTabParamList, 'Tab2Screen'>;
+type Props = CompositeScreenProps<
+    BottomTabScreenProps<MainBottomTabParamList, 'Main2Screen'>,
+    StackScreenProps<RootStackParamList>
+>;
 
-export function Tab2Screen(props: Props) {
+// type Props = BottomTabScreenProps<BottomTabsParamList, ''>;
+
+
+// FOR NESTED NAVS: https://bit.ly/3YFxLcx
+// type Props = CompositeScreenProps<
+//     BottomTabScreenProps<BottomTabsParamList, 'ExampleScreen'>,
+//     StackScreenProps<RootParamList>
+// >;
+
+export function Main2Screen(props: Props) {
+
+
+
     // SCREEN OPTIONS: https://bit.ly/3hEwUIy
     useEffect(() => {
         props.navigation.setOptions({
-            title: 'Tab2 Title',
-            tabBarLabel: 'Tab2',
+            title: 'Main2 Title',
+            tabBarLabel: 'Main2',
             // tabBarActiveTintColor: colors?.onPrimary,
             // tabBarInactiveTintColor: colors?.onBackground,
             tabBarIcon: ({ color, size, focused }) => (
@@ -30,7 +48,7 @@ export function Tab2Screen(props: Props) {
         <SafeAreaView edges={['left', 'right']} style={{ flex: 1 }}>
             <ScrollView contentContainerStyle={styles.container} style={{ flex: 1 }}>
                 <Text>
-                    Tab2 screen
+                    Main2 Screen
                 </Text>
             </ScrollView>
         </SafeAreaView>

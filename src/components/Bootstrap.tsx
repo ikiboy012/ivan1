@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import {
-  ImageBackground,
   StatusBar,
   SafeAreaView,
   KeyboardAvoidingView,
-  View,
 } from 'react-native';
 import Orientation from 'react-native-orientation-locker';
 import { navigationRef, useInitNavigation } from '../lib/navigation';
 import { NavigationContainer } from '@react-navigation/native';
-import { RootTabNav } from '../screens/RootBottomTabNav';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { RootStackNav } from '../screens/RootStackNav';
 
 export function Bootstrap() {
   const {
@@ -46,7 +44,7 @@ export function Bootstrap() {
             onStateChange={onNavStateChange}
             onUnhandledAction={onUnhandledNavAction}
           >
-            <RootTabNav />
+            <RootStackNav />
           </NavigationContainer>
         </SafeAreaView>
       </KeyboardAvoidingView >
