@@ -18,6 +18,7 @@ export function MainBottomTabNav() {
 
             <BottomTabs.Screen name="Main1Screen" component={Main1Screen} />
             <BottomTabs.Screen name="Main2Screen" component={Main2Screen} />
+
         </BottomTabs.Navigator>
     );
 };

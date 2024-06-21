@@ -18,10 +18,9 @@ export function RootStackNav() {
         // API: https://bit.ly/3v8FPox
         <Stack.Navigator>
 
-
-
-            <Stack.Screen name="AboutScreen" component={AboutScreen} />
             <Stack.Screen name="MainBottomTabNav" component={MainBottomTabNav} />
+            <Stack.Screen name="AboutScreen" component={AboutScreen} />
+
 
         </Stack.Navigator>
     );

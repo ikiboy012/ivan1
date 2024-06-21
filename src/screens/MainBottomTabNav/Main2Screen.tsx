@@ -29,13 +29,12 @@ type Props = CompositeScreenProps<
 
 export function Main2Screen(props: Props) {
 
-
-
     // SCREEN OPTIONS: https://bit.ly/3hEwUIy
     useEffect(() => {
         props.navigation.setOptions({
             title: 'Main2 Title',
             tabBarLabel: 'Main2',
+            headerShown: false,
             // tabBarActiveTintColor: colors?.onPrimary,
             // tabBarInactiveTintColor: colors?.onBackground,
             tabBarIcon: ({ color, size, focused }) => (

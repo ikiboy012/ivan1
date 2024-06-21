@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Button, StyleSheet, Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
@@ -36,6 +36,7 @@ export function Main1Screen(props: Props) {
         props.navigation.setOptions({
             title: 'Main1 titl',
             tabBarLabel: 'Main1',
+            headerShown: false,
             // tabBarActiveTintColor: colors?.onPrimary,
             // tabBarInactiveTintColor: colors?.onBackground,
             tabBarIcon: ({ color, size, focused }) => (
@@ -50,6 +51,12 @@ export function Main1Screen(props: Props) {
                 <Text>
                     Main1 Screen
                 </Text>
+                <Button
+                    title='ABOUT'
+                    onPress={() => {
+                        props.navigation.navigate('AboutScreen');
+                    }}
+                />
             </ScrollView>
         </SafeAreaView>
     );

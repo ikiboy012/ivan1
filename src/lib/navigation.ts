@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import queryString from 'query-string';
 import { NavigationAction, NavigationContainerRef, NavigationState, getPathFromState } from '@react-navigation/native';
-import { RootBottomTabParamList } from '../screens/RootBottomTabNav';
+import { RootStackParamList } from '../screens/RootStackNav';
 
 /**
  * Use navigationRef to access "navigation" from anywhere.
@@ -15,7 +15,7 @@ import { RootBottomTabParamList } from '../screens/RootBottomTabNav';
  * navigationRef.current?.dispatch(DrawerActions.toggleDrawer());
  * ```
  */
-export const navigationRef = React.createRef<NavigationContainerRef<RootBottomTabParamList>>();
+export const navigationRef = React.createRef<NavigationContainerRef<RootStackParamList>>();
 
 /**
  * Get current screen and its params.
